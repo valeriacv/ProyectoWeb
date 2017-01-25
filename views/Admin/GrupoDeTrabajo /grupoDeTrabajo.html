@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Grupo de Trabajo</title>
-	<link rel="stylesheet" type="text/css" href="./../../css/stylesheet.css">
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 </head>
 <body>
 	<header class="nombreOrg">
@@ -27,50 +27,59 @@
                 <li> ∆   GT3</li>
                 <li> ∆   GT4</li>
             </ul>
-            
+
         </aside>
         <section class="sectionOrganizacion">
             <div class="container">
                 <div class="lineaVertical"></div>
-            
-                <dl>
-                    <dt class="nombreDt">Resumen</dt>  
-                    <dd class="especificacionDd">asghjfireowpdkfgijhrefiwodkpaslsckdfjngrjefoirwekdpasl</dd>
-                </dl>
-            </div>
-            <div class="container">
-                <div class="lineaVertical"></div>
-                <dl>
-                    <dt class="nombreDt">Objetivos</dt>  
-                    <dd class="especificacionDd">
-                        <ul>
-                            <li>OBJ 1</li>
-                            <li>OBJ 2</li>
-                            <li>OBJ 3</li>
-                            <li>OBJ 4</li>
-                        </ul>
 
+                <dl>
+                    <dt class="nombreDt">Resumen</dt>
+                    <dd class="especificacionDd">
+                         <textarea class="parrafoOrganizacion" name="mensaje">
+                            vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml
+                        </textarea>
                     </dd>
                 </dl>
             </div>
             <div class="container">
                 <div class="lineaVertical"></div>
                 <dl>
-                    <dt class="nombreDt">Actividades</dt>  
+                    <dt class="nombreDt">
+                        <span>Objetivos </span>
+                        <button class="btnPlus" type="button" onclick="agregarObjetivoGT()">+</button>
+                    </dt>
+                    <dd id="listaObj" class="especificacionDd">
+                        <ul>
+                            <li>OBJ 1</li>
+                            <li>OBJ 2</li>
+                            <li>OBJ 3</li>
+                            <li>OBJ 4</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="container">
+                <div class="lineaVertical"></div>
+                <dl>
+                    <dt class="nombreDt">Actividades</dt>
                     <dd class="especificacionDd">asghjfireowpdkfgijhrefiwodkpaslsckdfjngrjefoirwekdpasl</dd>
                 </dl>
             </div>
         </section>
-    	
+
     </main>
     <footer class="footer">
-        <a href="" class="footerLink primerLink">link 1</a> 
-        <a href="" class="footerLink">link 2</a> 
+        <a href="" class="footerLink primerLink">link 1</a>
+        <a href="" class="footerLink">link 2</a>
         <a href="" class="footerLink ultimoLink">link 3</a>
         <div>
             <span class="spanCurso">Introduccion al desarrollo de aplicaciones Web</span>
             <span class="spanEstudiantes">Valeria Calderón ~ Luis Carlos Cruz ~ Lucia Zamora</span>
         </div>
     </footer>
+    <script type="text/javascript" src="../../../js/main.js"></script>
+    <script src="../../../vendor/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
 </body>
 </html>

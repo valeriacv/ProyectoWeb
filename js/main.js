@@ -2,14 +2,13 @@ function displayContAgregarGrupo(){
     var display = document.getElementById("contAgregarGrupo").style.display;
     var btnText = document.getElementById("btnDisplayAgregarGrupo").firstChild;
     if(display == 'none'){
-        document.getElementById("contAgregarGrupo").style.display = 'inline'; 
+        document.getElementById("contAgregarGrupo").style.display = 'inline';
         btnText.data = "Cancelar";
     }
     else{
         document.getElementById("contAgregarGrupo").style.display = 'none';
         btnText.data = "Agregar Curso";
     }
-    
 }
 
 var objCount = 0;
@@ -38,7 +37,6 @@ function removerObjetivo(pEvent) {
     list.removeChild(node);
 }
 
-
 function agregarObjetivoGT(){
     var objContainer = document.getElementById('listaObj');
     var inputCont = document.createElement("DIV");
@@ -56,4 +54,4 @@ function agregarObjetivoGT(){
     inputCont.appendChild(button);
     objContainer.appendChild(inputCont);
     objCount++;
-} 
+}

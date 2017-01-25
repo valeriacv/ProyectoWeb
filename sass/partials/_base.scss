@@ -26,7 +26,7 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .navBar li {
@@ -82,7 +82,6 @@ body{
     color: #D1595B;
 }
 
-
 .spanCurso {
     margin-top: 1%;
     float: left;
@@ -100,7 +99,7 @@ body{
 *                               HOME
 *
 ***********************************************************************/
-.homeImg{
+.homeImg {
     display: block;
     margin: auto;
     width: 50%;
@@ -133,7 +132,7 @@ body{
     margin-left: 10%;
     margin-bottom: 8%;
     margin-top: 8%;
-    
+
 }
 
 .lineaVertical{
@@ -145,7 +144,7 @@ body{
     color: #D1595B;
     font-size: 1.5em;
     margin-bottom: 1%;
-    margin-left: 1em;  
+    margin-left: 1em;
 }
 
 .especificacionDd{
@@ -176,7 +175,7 @@ body{
 .listaGruposTrabajo{
     list-style-type: none;
     color: #D1595B;
-    
+
 }
 
 .listaGruposTrabajo li {
@@ -207,7 +206,7 @@ body{
 }
 
 .tablaGT th, tr, td{
-    border: 1px solid black; 
+    border: 1px solid black;
 }
 
 .tablaGT th{
@@ -230,7 +229,7 @@ body{
     width: 50%;
     margin-bottom: 2%;
 }
-.label{ 
+.label{
     color: #3E3A4B;
     font-size: 1em;
 }
@@ -260,14 +259,14 @@ body{
 }
 
 
-.inputContainer input:focus, 
+.inputContainer input:focus,
 .inputContainer textarea:focus{
-    outline: none; 
+    outline: none;
 }
 
 .inputContainer input[type="checkbox"] {
-    border: none;  
-    font-size: 1em;  
+    border: none;
+    font-size: 1em;
     height: 1em;
     margin-bottom: 2%;
     margin-top: 2%;
@@ -294,10 +293,9 @@ body{
 }
 
 .btnAgregar  a:link, .btnAgregar  a:visited {
-    color: white; 
+    color: white;
     text-decoration: none;
 }
-
 
 .btnAgregar:hover, .btnPlus:hover{
     background-color: #D1595B;
@@ -352,17 +350,7 @@ body{
     margin-bottom: 2%;
 }
 
-
 .objInput{
     border: 1px solid #D1595B;
     width: 30%;
 }
-
-
-
-
-
-
-
-
-
