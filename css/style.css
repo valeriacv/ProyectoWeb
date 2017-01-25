@@ -248,11 +248,13 @@ body {
 
 .asideTitulo {
   color: #3E3A4B;
+  margin: 1em 0;
 }
 
 .sectionTitulos {
   color: #3E3A4B;
   font-size: 1.5em;
+  margin: 1em 0;
 }
 
 .parrafoOrganizacion {
@@ -272,10 +274,13 @@ body {
 
 .tablaGT th {
   color: #D1595B;
+  text-align: center;
+  padding: 1em 1.5em;
 }
 
 .tablaGT td {
   color: #888888;
+  padding: 1em 1.5em;
 }
 
 /**********************************************************************
