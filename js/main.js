@@ -9,6 +9,7 @@ function displayContAgregarGrupo(){
         document.getElementById("contAgregarGrupo").style.display = 'none';
         btnText.data = "Agregar Curso";
     }
+
 }
 
 var objCount = 0;

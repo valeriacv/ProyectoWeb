@@ -13,6 +13,13 @@ body{
     color: #D1595B;
     display: flex;
     justify-content: center;
+
+    h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
 }
 
 .navBar {
