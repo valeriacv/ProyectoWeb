@@ -1,0 +1,368 @@
+/**********************************************************************
+*
+*                           ESTILOS GENERALES
+*
+***********************************************************************/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nombreOrg {
+    background-color: white;
+    color: #D1595B;
+    display: flex;
+    justify-content: center;
+}
+
+.navBar {
+    background-color: #F4F4F4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+}
+
+.navBar li {
+    float: left;
+}
+
+.navBar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 2.5em 2em;
+    text-decoration: none;
+}
+
+.navBar li a:hover:not(.active) {
+    color: #D1595B;
+    border-bottom: 4px solid #D1595B;
+}
+
+.navBar .currentLink a{
+    color: #D1595B;
+    border-bottom: 4px solid #D1595B;
+}
+
+.footer{
+    background-color: #3E3A4B;
+    height: 3em;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    clear: both;
+
+}
+
+.footerLink{
+    color: white;
+    padding-right: 1%;
+    padding-left: 1%;
+    border-right: 2px solid white;
+    text-decoration: none;
+}
+
+.primerLink{
+    padding-left: 0;
+}
+
+.ultimoLink{
+    border-right-width: 0;
+}
+
+.footerLink:hover:not(.active) {
+    color: #D1595B;
+}
+
+
+.spanCurso {
+    margin-top: 1%;
+    float: left;
+    color: white;
+}
+
+.spanEstudiantes {
+    margin-top: 1%;
+    float: right;
+    color: #888888;
+}
+
+/**********************************************************************
+*
+*                               HOME
+*
+***********************************************************************/
+.homeImg{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+.imgContainer{
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/**********************************************************************
+*
+*                            QUIENES SOMOS
+*
+***********************************************************************/
+.tituloPagina{
+    background-color: #D1595B;
+    color: white;
+    margin: 0;
+    height: 1em;
+    font-size: 2em;
+    padding-left: 4em;
+    padding-right: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 3%;
+}
+
+.container{
+    margin-left: 10%;
+    margin-bottom: 8%;
+    margin-top: 8%;
+    
+}
+
+.lineaVertical{
+    float: left;
+    border: 2px solid #3E3A4B;
+    height: 5em;
+}
+.nombreDt{
+    color: #D1595B;
+    font-size: 1.5em;
+    margin-bottom: 1%;
+    margin-left: 1em;  
+}
+
+.especificacionDd{
+    color: #888888;
+    margin: 0;
+    margin-left: 2em;
+    width: 60%;
+}
+/**********************************************************************
+*
+*                          NUESTRO TRABAJO
+*
+***********************************************************************/
+.menuGrupos{
+    float: left;
+    width: 20%;
+    padding-left: 5%;
+    margin-right: 5%
+}
+
+.sectionOrganizacion{
+    float: right;
+    width: 60%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.listaGruposTrabajo{
+    list-style-type: none;
+    color: #D1595B;
+    
+}
+
+.listaGruposTrabajo li {
+    border-bottom: 2px solid #F4F4F4;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    margin-bottom: 10%;
+}
+
+.asideTitulo{
+    color: #3E3A4B;
+}
+
+.sectionTitulos{
+    color: #3E3A4B;
+    font-size: 1.5em;
+}
+
+.parrafoOrganizacion{
+    color: #888888;
+}
+
+.tablaGT{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 5em;
+    text-decoration: none;
+}
+
+.tablaGT th, tr, td{
+    border: 1px solid black; 
+}
+
+.tablaGT th{
+    color: #D1595B;
+}
+
+.tablaGT td{
+    color: #888888;
+}
+
+/**********************************************************************
+*
+*                          TRABAJE CON NOSOTROS
+*
+***********************************************************************/
+
+.inputContainer{
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 2%;
+}
+.label{ 
+    color: #3E3A4B;
+    font-size: 1em;
+}
+
+.inputContainer input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #D1595B;
+    background-color: transparent;
+    width: 90%;
+    font-size: 1em;
+    color: #888888;
+    height: 1em;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.inputContainer textarea {
+    width: 100%;
+    height: 8em;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    color: #888888;
+    background-color: transparent;
+    border: 2px solid #D1595B;
+}
+
+
+.inputContainer input:focus, 
+.inputContainer textarea:focus{
+    outline: none; 
+}
+
+.inputContainer input[type="checkbox"] {
+    border: none;  
+    font-size: 1em;  
+    height: 1em;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.sectionBtn, .sectionAgregarGrupo{
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnAgregar{
+    margin-bottom: 5%;
+    color: white;
+    background-color: #3E3A4B;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btnAgregar  a:link, .btnAgregar  a:visited {
+    color: white; 
+    text-decoration: none;
+}
+
+
+.btnAgregar:hover, .btnPlus:hover{
+    background-color: #D1595B;
+}
+
+/**********************************************************************
+*
+*                                ADMIN
+*
+***********************************************************************/
+/**********************************************************************
+*
+*                           NUESTRO TRABAJO
+*
+***********************************************************************/
+
+.sectionAgregarGrupo{
+    clear: both;
+}
+
+.titulos{
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 5%;
+    font-size: 1.5em;
+}
+
+.btnPlus{
+    margin-left: 2%;
+    color: white;
+    background-color: #3E3A4B;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.objCont input[type="text"]{
+    width: 90%;
+}
+
+.infoActividades{
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.sectionGuardarActividad{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2%;
+}
+
+
+.objInput{
+    border: 1px solid #D1595B;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+

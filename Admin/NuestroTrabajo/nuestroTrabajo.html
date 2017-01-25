@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nuestro Trabajo</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./../../css/stylesheet.css">
+    <script type="text/javascript" src="./../../JavaScript/funciones.js"></script>
+    <script src="../../tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+	<header class="nombreOrg">
+        <h1>Aldeas Infantiles SOS</h1>
+    </header>
+    <nav class="navBar">
+        <ul class="navUl">
+            <li><a href="./../Home/home.html">Home</a></li>
+            <li><a href="./../QuienesSomos/quienesSomos.html">Quienes somos</a></li>
+            <li class="currentLink"><a href="./../NuestroTrabajo/nuestroTrabajo.html">Nuestro trabajo</a></li>
+            <li><a href="./../TrabajeConNosotros/trabajeConNosotros.html">Trabaje con nosotros</a></li>
+        </ul>
+    </nav>
+     <main>
+        <h2 class="tituloPagina">Nuestro Trabajo</h2>
+        <aside class="menuGrupos">
+            <h3 class="asideTitulo">Organizacion</h3>
+            <ul class="listaGruposTrabajo">
+                <li> ∆   GT1</li>
+                <li> ∆   GT2</li>
+                <li> ∆   GT3</li>
+                <li> ∆   GT4</li>
+            </ul>
+            
+        </aside>
+        <section class="sectionOrganizacion">
+            <h3 class="sectionTitulos">Organizacion</h3>
+            <textarea class="parrafoOrganizacion" name="mensaje">
+                        vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml
+            </textarea>
+            <h3 class="sectionTitulos">Grupos de trabajo</h3>
+            <table class="tablaGT" cellpadding="20">
+                <tr>
+                    <th>Grupo de trabajo</th>
+                    <th>Resumen</th>
+                </tr>
+                <tr>
+                    <td>GT1</td>
+                    <td>gfhuisajlsjrhfd</td>
+                </tr>
+                <tr>
+                    <td>GT2</td>
+                    <td>gfhuisajlsjrhfd</td>
+                </tr>
+                <tr>
+                    <td>GT3</td>
+                    <td>gfhuisajlsjrhfd</td>
+                </tr>
+                <tr>
+                    <td>GT4</td>
+                    <td>gfhuisajlsjrhfd</td>
+                </tr>
+            </table>
+        </section>
+        <section class="sectionAgregarGrupo">
+            <button id="btnDisplayAgregarGrupo" class="btnAgregar" onclick="displayContAgregarGrupo()">
+                Agregar Grupo
+            </button>
+        </section>
+        <div id="contAgregarGrupo" class="containerAgregar" style="display: none;">
+            <h3 class="titulos">Agregar Grupo</h3>
+
+            <div class="inputContainer">
+                <span class="label"> Nombre:</span>
+                <input id="codigo" type="text">
+            </div>
+            <div class="inputContainer">
+                <span class="label"> Resumen:</span>
+                <textarea name="mensaje">
+                        vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml
+                </textarea>
+            </div>
+            <div class="inputContainer objCont" id="objetivosContainer">
+                <span class="label">Objetivos: </span>
+                <button class="btnPlus" type="button" onclick="agregarObjetivoInput()">+</button>
+                <input id="objetivo" type="text">
+
+            </div>
+            <div class="inputContainer">
+                <span class="label">Actividades: </span>
+                <div class="infoActividades">
+                    <div class="inputContainer">
+                        <span class="label"> Nombre:</span>
+                        <input id="codigo" type="text">
+                    </div>
+                    <div class="inputContainer">
+                        <span class="label"> Fecha:</span>
+                        <input id="codigo" type="text">
+                    </div>
+                    <div class="inputContainer">
+                        <span class="label"> Lugar:</span>
+                        <input id="codigo" type="text">
+                    </div>
+                    <div class="inputContainer">
+                        <span class="label"> Foto:</span>
+                        <input id="codigo" type="file">
+                    </div>
+                    <div class="inputContainer">
+                        <span class="label"> Descripcion:</span>
+                        <textarea name="mensaje">
+                                vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml
+                        </textarea>
+                    </div> 
+                </div>
+            </div>
+            <section class="sectionAgregarGrupo">
+                <button class="btnAgregar" onclick="agregarCurso();">Agregar</button>
+            </section>
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <a href="" class="footerLink primerLink">link 1</a> 
+        <a href="" class="footerLink">link 2</a> 
+        <a href="" class="footerLink ultimoLink">link 3</a>
+        <div>
+            <span class="spanCurso">Introduccion al desarrollo de aplicaciones Web</span>
+            <span class="spanEstudiantes">Valeria Calderón ~ Luis Carlos Cruz ~ Lucia Zamora</span>
+        </div>
+    </footer>
+</body>
+</html>
