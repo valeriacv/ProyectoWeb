@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
     <header class="nombreOrg">
@@ -13,12 +13,16 @@
         </ul>
     </nav>
     <main>
+        <div id="messageContainer" class="display-message">
+            <p id="message"></p>
+            <span class="remove-message" onclick="removeMessage()">x</span>
+        </div>
         <div class="login-form">
-            <input type="text" name="username" placeholder="Username" /></br>
-            <input type="text" name="password" placeholder="Password" /></br>
-            <button class="submit-btn">
-                <a href="./admin-contacto.html">Ingresar</a>
-            </button>
+            <div class="inputContainer">
+                <input id="userName" type="text" name="username" placeholder="Username" />
+                <input id="password" type="password" name="password" placeholder="Password" />
+            </div>
+            <button class="btnAgregar" onclick="login()">Ingresar</button>
         </div>
     </main>
     <footer class="footer">
@@ -30,5 +34,6 @@
             <span class="spanEstudiantes">Valeria Calderón ~ Luis Carlos Cruz ~ Lucia Zamora</span>
         </div>
     </footer>
+    <script type="text/javascript" src="../../js/main.js"></script>
 </body>
 </html>
