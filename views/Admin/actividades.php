@@ -42,7 +42,7 @@
         <section class="sectionOrganizacion">
             <?php
                 include("./../../PHP/conexion.php");
-                $sql = "SELECT act.nombre as nombreAct, act.fecha, act.lugar, act.descripcion, gt.nombre as nombreGrupo
+                $sql = "SELECT act.id as idAct, act.nombre as nombreAct, act.fecha, act.lugar, act.descripcion, gt.nombre as nombreGrupo
                         FROM Actividades act
                         INNER JOIN GruposTrabajo gt ON act.GruposTrabajo_id = gt.id";
                 $result = $conn->query($sql);
@@ -50,22 +50,17 @@
                     echo " <table class='tablaGT' cellpadding='20' cellspacing='0'>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Fecha</th>
-                                    <th>Lugar</th>
                                     <th>Descripción</th>
                                     <th>Grupo</th>
                                 </tr>";
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
+                        $id = $row["idAct"];
                         $nombre = $row["nombreAct"];
-                        $fecha = $row["fecha"];
-                        $lugar = $row["lugar"];
                         $descripcion = $row["descripcion"];
                         $nombreGrupo = $row["nombreGrupo"];
                         echo "  <tr>
-                                    <td>$nombre</td>
-                                    <td>$fecha</td>
-                                    <td>$lugar</td>
+                                    <td><a href='./../../PHP/mostrarActividad.php?id=$id'>$nombre</a></td>
                                     <td>$descripcion</td>
                                     <td>$nombreGrupo</td>
                                 </tr>";

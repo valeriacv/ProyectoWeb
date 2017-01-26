@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Grupo de Trabajo</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 	<header class="nombreOrg">
@@ -12,10 +12,9 @@
     <nav class="navBar">
         <ul class="navUl">
             <li><a href="./home.html">Home</a></li>
-            <li><a href="./quienesSomos.html">Quienes somos</a></li>
+            <li><a href="./quienesSomos.php">Quienes somos</a></li>
             <li><a href="./nuestroTrabajo.php">Nuestro trabajo</a></li>
             <li><a href="./trabajeConNosotros.html">Trabaje con nosotros</a></li>
-            <li><a href="./actividades.php">Actividades</a></li>
         </ul>
     </nav>
     <main>
@@ -34,34 +33,28 @@
                 }
             }
         ?>
-       
         <aside class="menuGrupos">
             <h3 class="asideTitulo">Organizacion</h3>
             <ul class="listaGruposTrabajo">
                 <?php
                     include("./../../PHP/conexion.php");
-                    if(isset($_GET["id"])){
-                        $sql = "SELECT id, nombre FROM GruposTrabajo";
-                        $result = $conn->query($sql);
+                    $sql = "SELECT id, nombre FROM GruposTrabajo";
+                    $result = $conn->query($sql);
 
-                        if ($result->num_rows > 0) {
-                            // output data of each row
-                            while($row = $result->fetch_assoc()) {
-                                $id = $row["id"];
-                                $nombre = $row["nombre"];
-                                echo "<li><a href='./grupoDeTrabajo.php?id=$id'>$nombre</a></li>";
-                            }
-                        } else {
-                            echo "El grupo seleccionado no existe";
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            $id = $row["id"];
+                            $nombre = $row["nombre"];
+                            echo "<li><a href='./grupoDeTrabajo.php?id=$id'>$nombre</a></li>";
                         }
-                    }
-                    else{
-                        echo "error";
+                    } else {
+                        echo "No hay grupos";
                     }
                 ?> 
             </ul>
         </aside>
-        <section class="sectionOrganizacion">
+         <section class="sectionOrganizacion">
             <div class="container">
                 <div class="lineaVertical"></div>
                 <dl>
@@ -77,7 +70,7 @@
                                 if ($result->num_rows > 0) {
                                     while($row = $result->fetch_assoc()){
                                         $descripcionGrupo = $row["descripcion"];
-                                        echo "<textarea class='parrafoOrganizacion' name='mensaje'>$descripcionGrupo</textarea>";
+                                        echo $descripcionGrupo;
                                     }
                                 }
                             }
@@ -142,7 +135,7 @@
                                     $nombre = $row["nombre"];
                                     $descripcion = $row["descripcion"];
                                     echo "  <tr>
-                                                <td><a href='./../../PHP/mostrarActividad.php?id=$id'>$nombre</a></td>
+                                                <td><a href='./mostrarActividad.php?id=$id'>$nombre</a></td>
                                                 <td>$descripcion</td>
                                             </tr>";
                                 }
@@ -166,6 +159,5 @@
             <span class="spanEstudiantes">Valeria Calderón ~ Luis Carlos Cruz ~ Lucia Zamora</span>
         </div>
     </footer>
-    <script type="text/javascript" src="../../js/main.js"></script>
 </body>
 </html>
