@@ -54,14 +54,71 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/**********************************************************************
-*
-*                           ESTILOS GENERALES
-*
-***********************************************************************/
-body {
+.footer {
+  background-color: #3E3A4B;
+  height: 3em;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  clear: both;
+}
+.footer .footerLink {
+  color: white;
+  padding-right: 1%;
+  padding-left: 1%;
+  border-right: 2px solid white;
+  text-decoration: none;
+}
+.footer .primerLink {
+  padding-left: 0;
+}
+.footer .ultimoLink {
+  border-right-width: 0;
+}
+.footer .footerLink:hover:not(.active) {
+  color: #D1595B;
+}
+.footer .spanCurso {
+  margin-top: 1%;
+  float: left;
+  color: white;
+}
+.footer .spanEstudiantes {
+  margin-top: 1%;
+  float: right;
+  color: #888888;
+}
+
+.navBar {
+  background-color: #F4F4F4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navBar ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+.navBar ul li {
+  float: left;
+}
+.navBar ul a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 2.5em 2em;
+  text-decoration: none;
+}
+.navBar ul a:hover:not(.active) {
+  color: #D1595B;
+  border-bottom: 4px solid #D1595B;
+}
+.navBar .currentLink a {
+  color: #D1595B;
+  border-bottom: 4px solid #D1595B;
 }
 
 .nombreOrg {
@@ -76,82 +133,14 @@ body {
   margin: 20px 0;
 }
 
-.navBar {
-  background-color: #F4F4F4;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.navBar ul {
-  list-style-type: none;
+/**********************************************************************
+*
+*                           ESTILOS GENERALES
+*
+***********************************************************************/
+body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-
-.navBar li {
-  float: left;
-}
-
-.navBar li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 2.5em 2em;
-  text-decoration: none;
-}
-
-.navBar li a:hover:not(.active) {
-  color: #D1595B;
-  border-bottom: 4px solid #D1595B;
-}
-
-.navBar .currentLink a {
-  color: #D1595B;
-  border-bottom: 4px solid #D1595B;
-}
-
-.footer {
-  background-color: #3E3A4B;
-  height: 3em;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
-  clear: both;
-}
-
-.footerLink {
-  color: white;
-  padding-right: 1%;
-  padding-left: 1%;
-  border-right: 2px solid white;
-  text-decoration: none;
-}
-
-.primerLink {
-  padding-left: 0;
-}
-
-.ultimoLink {
-  border-right-width: 0;
-}
-
-.footerLink:hover:not(.active) {
-  color: #D1595B;
-}
-
-.spanCurso {
-  margin-top: 1%;
-  float: left;
-  color: white;
-}
-
-.spanEstudiantes {
-  margin-top: 1%;
-  float: right;
-  color: #888888;
 }
 
 /**********************************************************************
@@ -294,13 +283,7 @@ body {
   width: 50%;
   margin-bottom: 2%;
 }
-
-.label {
-  color: #3E3A4B;
-  font-size: 1em;
-}
-
-.inputContainer input[type="text"] {
+.inputContainer input[type="text"], .inputContainer input[type="password"] {
   border: none;
   border-bottom: 2px solid #D1595B;
   background-color: transparent;
@@ -312,7 +295,6 @@ body {
   margin-top: 2%;
   margin-left: 1%;
 }
-
 .inputContainer textarea {
   width: 100%;
   height: 8em;
@@ -323,12 +305,9 @@ body {
   background-color: transparent;
   border: 2px solid #D1595B;
 }
-
-.inputContainer input:focus,
-.inputContainer textarea:focus {
+.inputContainer input:focus, .inputContainer textarea:focus {
   outline: none;
 }
-
 .inputContainer input[type="checkbox"] {
   border: none;
   font-size: 1em;
@@ -336,6 +315,11 @@ body {
   margin-bottom: 2%;
   margin-top: 2%;
   margin-left: 15%;
+}
+
+.label {
+  color: #3E3A4B;
+  font-size: 1em;
 }
 
 .sectionBtn, .sectionAgregarGrupo {
@@ -354,6 +338,7 @@ body {
   display: inline-block;
   font-size: 16px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .btnAgregar a:link, .btnAgregar a:visited {
@@ -391,4 +376,39 @@ body {
   display: flex;
   justify-content: center;
   background-color: red;
+}
+
+.objInput {
+  border: 1px solid #D1595B;
+  width: 30%;
+}
+
+.display-message {
+  text-align: center;
+  margin: 0 20px 20px 20px;
+  position: relative;
+  border-radius: 5px;
+  min-height: 30px;
+  display: none;
+}
+.display-message.error {
+  background-color: #eda1a1;
+  color: red;
+  display: block;
+}
+.display-message.success {
+  background-color: #93c47d;
+  color: #fff;
+  display: block;
+}
+.display-message .remove-message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2px 15px 0 0;
+  color: #fff;
+  cursor: pointer;
+}
+.display-message p {
+  padding-top: 5px;
 }
