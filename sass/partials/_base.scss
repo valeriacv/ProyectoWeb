@@ -84,6 +84,14 @@ body{
     width: 60%;
     margin-right: 10%;
     margin-bottom: 5%;
+
+    &.user {
+        float: none;
+        margin: 0 auto 25px auto;
+        width: 80%;
+    }
+
+
 }
 
 .listaGruposTrabajo{

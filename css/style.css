@@ -222,6 +222,11 @@ body {
   margin-right: 10%;
   margin-bottom: 5%;
 }
+.sectionOrganizacion.user {
+  float: none;
+  margin: 0 auto 25px auto;
+  width: 80%;
+}
 
 .listaGruposTrabajo {
   list-style-type: none;
@@ -420,4 +425,23 @@ body {
 }
 .display-message p {
   padding-top: 5px;
+}
+
+.login-form {
+  margin: 100px auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.login-form .inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+.login-form .inputContainer input[type="text"], .login-form .inputContainer input[type="password"] {
+  margin: 0 auto 25px auto;
+  height: 25px;
+  width: 98%;
 }
