@@ -360,6 +360,17 @@ body {
 *                           NUESTRO TRABAJO
 *
 ***********************************************************************/
+.sectionOrganizacion textarea {
+  width: 100%;
+  height: 8em;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  color: #888888;
+  background-color: transparent;
+  border: 2px solid #D1595B;
+}
+
 .sectionAgregarGrupo {
   clear: both;
 }
@@ -372,15 +383,13 @@ body {
   font-size: 1.5em;
 }
 
-.resultadoAgregar {
-  display: flex;
-  justify-content: center;
-  background-color: red;
+.listaGruposTrabajo li a {
+  text-decoration: none;
+  color: #D1595B;
 }
 
-.objInput {
-  border: 1px solid #D1595B;
-  width: 30%;
+.tablaGT tr td a {
+  color: #3E3A4B;
 }
 
 .display-message {

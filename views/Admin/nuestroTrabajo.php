@@ -15,34 +15,39 @@
             <li><a href="./quienesSomos.html">Quienes somos</a></li>
             <li class="currentLink"><a href="./nuestroTrabajo.php">Nuestro trabajo</a></li>
             <li><a href="./trabajeConNosotros.html">Trabaje con nosotros</a></li>
+            <li><a href="./actividades.php">Actividades</a></li>
         </ul>
     </nav>
-     <main>
+    <main>
         <h2 class="tituloPagina">Nuestro Trabajo</h2>
+        <div id="messageContainer" class="display-message">
+            <p id="message"></p>
+            <span class="remove-message" onclick="removeMessage();">x</span>
+        </div>
         <aside class="menuGrupos">
             <h3 class="asideTitulo">Organizacion</h3>
             <ul class="listaGruposTrabajo">
                 <?php
                     include("./../../PHP/conexion.php");
-                    $sql = "SELECT nombre FROM GruposTrabajo";
+                    $sql = "SELECT id, nombre FROM GruposTrabajo";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
+                            $id = $row["id"];
                             $nombre = $row["nombre"];
-                            echo "<li><a href=''>$nombre</a></li>";
+                            echo "<li><a href='./grupoDeTrabajo.php?id=$id'>$nombre</a></li>";
                         }
                     } else {
                         echo "No hay grupos";
                     }
                 ?> 
             </ul>
-
         </aside>
         <section class="sectionOrganizacion">
             <h3 class="sectionTitulos">Organizacion</h3>
-            <textarea class="parrafoOrganizacion" name="mensaje">
+            <textarea name="mensaje">
                         vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml vufejdiwoi9r48tuhgrbefjdnkwoeir394t8uhgybefhjdknsml
             </textarea>
             <h3 class="sectionTitulos">Grupos de trabajo</h3>
@@ -53,16 +58,17 @@
                 </tr>
                 <?php
                     include("./../../PHP/conexion.php");
-                    $sql = "SELECT nombre, descripcion FROM GruposTrabajo";
+                    $sql = "SELECT id, nombre, descripcion FROM GruposTrabajo";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
+                            $id = $row["id"];
                             $nombre = $row["nombre"];
                             $descripcion = $row["descripcion"];
                             echo "  <tr>
-                                        <td><a href=''>$nombre</a></td>
+                                        <td><a href='./grupoDeTrabajo.php?id=$id'>$nombre</a></td>
                                         <td>$descripcion</td>
                                     </tr>";
                         }
@@ -91,9 +97,6 @@
             <section class="sectionAgregarGrupo">
                 <button class="btnAgregar" onclick="agregarGrupoTrabajo();">Agregar</button>
             </section>
-        </div>
-        <div class="resultadoAgregar" id="divResultadoAgregarGT" >
-            <span id="spanResultadoAgregarGT">fhdnjsmkz</span>
         </div>
 
     </main>
