@@ -142,7 +142,7 @@ function login () {
  */
 function setUserGroups(pGroupsString) {
     setCookie('userGroups', pGroupsString,1);
-    window.location = './home.html';
+    window.location = './home.php';
 }
 
 /**

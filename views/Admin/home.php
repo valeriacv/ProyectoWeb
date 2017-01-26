@@ -10,17 +10,25 @@
     </header>
     <nav class="navBar">
         <ul class="navUl">
-            <li class="currentLink"><a href="./home.html">Home</a></li>
+            <li class="currentLink"><a href="./home.php">Home</a></li>
             <li><a href="./quienesSomos.html">Quienes somos</a></li>
             <li><a href="./nuestroTrabajo.php">Nuestro trabajo</a></li>
             <li><a href="./trabajeConNosotros.html">Trabaje con nosotros</a></li>
             <li><a href="./actividades.php">Actividades</a></li>
+            <li><a onclick="logOut()">Salir</a></li>
         </ul>
     </nav>
     <main>
     	<div class="imgContainer">
     		<img src="../../images/aldeasInfantiles4.jpg" class="homeImg"/>
     	</div>
+        <?php
+            if(isset($_COOKIE['userGroups'])) {
+                if($_COOKIE['userGroups'] === 'admin') {
+                    echo "<a href='./usuarios.php' class='btnAgregar user-admin-btn'>Administración Usuarios</a>";
+                }
+            }
+        ?>
     </main>
     <footer class="footer">
     	<a href="" class="footerLink primerLink">link 1</a>

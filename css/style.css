@@ -111,6 +111,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   padding: 2.5em 2em;
   text-decoration: none;
+  cursor: pointer;
 }
 .navBar ul a:hover:not(.active) {
   color: #D1595B;
@@ -425,6 +426,12 @@ body {
 }
 .display-message p {
   padding-top: 5px;
+}
+
+.user-admin-btn {
+  margin: 0 auto 40px auto;
+  display: flex;
+  width: 170px;
 }
 
 .login-form {
