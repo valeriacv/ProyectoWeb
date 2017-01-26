@@ -387,33 +387,8 @@ body {
   font-size: 1.5em;
 }
 
-.btnPlus {
-  margin-left: 2%;
-  color: white;
-  background-color: #3E3A4B;
-  border: none;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-}
-
-.objCont input[type="text"] {
-  width: 90%;
-}
-
-.infoActividades {
-  border-bottom: 2px solid #F4F4F4;
-}
-
-.sectionGuardarActividad {
+.resultadoAgregar {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 2%;
-}
-
-.objInput {
-  border: 1px solid #D1595B;
-  width: 30%;
+  justify-content: center;
+  background-color: red;
 }
