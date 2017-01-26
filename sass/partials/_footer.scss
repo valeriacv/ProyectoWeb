@@ -1,0 +1,45 @@
+.footer{
+    background-color: #3E3A4B;
+    height: 3em;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    clear: both;
+
+    .footerLink{
+        color: white;
+        padding-right: 1%;
+        padding-left: 1%;
+        border-right: 2px solid white;
+        text-decoration: none;
+    }
+
+    .primerLink{
+        padding-left: 0;
+    }
+
+    .ultimoLink{
+        border-right-width: 0;
+    }
+
+    .footerLink:hover:not(.active) {
+        color: #D1595B;
+    }
+
+    .spanCurso {
+        margin-top: 1%;
+        float: left;
+        color: white;
+    }
+
+    .spanEstudiantes {
+        margin-top: 1%;
+        float: right;
+        color: #888888;
+    }
+
+}
+
+
+

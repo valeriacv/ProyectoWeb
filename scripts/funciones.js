@@ -56,3 +56,36 @@ function agregarObjetivoGT(){
     objContainer.appendChild(inputCont);
     objCount++;
 }
+
+/**
+ * Removes the message on the message container
+ * @return {[type]} [void]
+ */
+function removeMessage() {
+
+    // Hide the message container
+    var messageContainer = document.getElementById('messageContainer');
+    messageContainer.className = 'display-message';
+
+    // Remove the message Text
+    var message = document.getElementById('message');
+    message.innerHTML = "";
+}
+
+/**
+ * Displays a message on the container
+ * @param  {String} pMessage [The message to be displayed]
+ * @param  {Bool} pIsError [Bool value to know if error or not]
+ * @return {[type]}          [void]
+ */
+function displayMessage(pMessage, pIsError) {
+
+    // Set the container class
+    var messageContainer = document.getElementById('messageContainer');
+    var containerClass = (pIsError) ? 'error' : 'success';
+    messageContainer.className = 'display-message ' + containerClass;
+
+    // Set the error message
+    var message = document.getElementById('message');
+    message.innerHTML = pMessage;
+}
