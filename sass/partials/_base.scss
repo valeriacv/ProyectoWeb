@@ -101,11 +101,13 @@ body{
 
 .asideTitulo{
     color: #3E3A4B;
+    margin: 1em 0;
 }
 
 .sectionTitulos{
     color: #3E3A4B;
     font-size: 1.5em;
+    margin: 1em 0;
 }
 
 .parrafoOrganizacion{
@@ -125,10 +127,13 @@ body{
 
 .tablaGT th{
     color: #D1595B;
+    text-align: center;
+    padding: 1em 1.5em;
 }
 
 .tablaGT td{
     color: #888888;
+    padding: 1em 1.5em;
 }
 
 /**********************************************************************
@@ -236,30 +241,10 @@ body{
     font-size: 1.5em;
 }
 
-.btnPlus{
-    margin-left: 2%;
-    color: white;
-    background-color: #3E3A4B;
-    border: none;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 4px;
-}
-
-.objCont input[type="text"]{
-    width: 90%;
-}
-
-.infoActividades{
-    border-bottom: 2px solid #F4F4F4;
-}
-
-.sectionGuardarActividad{
+.resultadoAgregar{
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2%;
+    justify-content: center;
+    background-color: red;
 }
 
 .objInput{

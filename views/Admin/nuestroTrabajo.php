@@ -3,7 +3,7 @@
 <head>
 	<title>Nuestro Trabajo</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="./../../css/style.css">
 </head>
 <body>
 	<header class="nombreOrg">
@@ -13,7 +13,7 @@
         <ul class="navUl">
             <li><a href="./home.html">Home</a></li>
             <li><a href="./quienesSomos.html">Quienes somos</a></li>
-            <li class="currentLink"><a href="./nuestroTrabajo.html">Nuestro trabajo</a></li>
+            <li class="currentLink"><a href="./nuestroTrabajo.php">Nuestro trabajo</a></li>
             <li><a href="./trabajeConNosotros.html">Trabaje con nosotros</a></li>
         </ul>
     </nav>
@@ -22,10 +22,21 @@
         <aside class="menuGrupos">
             <h3 class="asideTitulo">Organizacion</h3>
             <ul class="listaGruposTrabajo">
-                <li> ∆   GT1</li>
-                <li> ∆   GT2</li>
-                <li> ∆   GT3</li>
-                <li> ∆   GT4</li>
+                <?php
+                    include("./../../PHP/conexion.php");
+                    $sql = "SELECT nombre FROM GruposTrabajo";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            $nombre = $row["nombre"];
+                            echo "<li><a href=''>$nombre</a></li>";
+                        }
+                    } else {
+                        echo "No hay grupos";
+                    }
+                ?> 
             </ul>
 
         </aside>
@@ -38,24 +49,27 @@
             <table class="tablaGT" cellpadding="20" cellspacing="0">
                 <tr>
                     <th>Grupo de trabajo</th>
-                    <th>Resumen</th>
+                    <th>Descripción</th>
                 </tr>
-                <tr>
-                    <td>GT1</td>
-                    <td>gfhuisajlsjrhfd</td>
-                </tr>
-                <tr>
-                    <td>GT2</td>
-                    <td>gfhuisajlsjrhfd</td>
-                </tr>
-                <tr>
-                    <td>GT3</td>
-                    <td>gfhuisajlsjrhfd</td>
-                </tr>
-                <tr>
-                    <td>GT4</td>
-                    <td>gfhuisajlsjrhfd</td>
-                </tr>
+                <?php
+                    include("./../../PHP/conexion.php");
+                    $sql = "SELECT nombre, descripcion FROM GruposTrabajo";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            $nombre = $row["nombre"];
+                            $descripcion = $row["descripcion"];
+                            echo "  <tr>
+                                        <td><a href=''>$nombre</a></td>
+                                        <td>$descripcion</td>
+                                    </tr>";
+                        }
+                    } else {
+                        echo "No hay grupos";
+                    }
+                ?> 
             </table>
         </section>
         <section class="sectionAgregarGrupo">
@@ -68,15 +82,18 @@
 
             <div class="inputContainer">
                 <span class="label"> Nombre:</span>
-                <input id="codigo" type="text">
+                <input id="nombre" type="text">
             </div>
             <div class="inputContainer">
-                <span class="label"> Resumen:</span>
-                <textarea name="mensaje"></textarea>
+                <span class="label"> Descripcion:</span>
+                <textarea id="descripcion" name="descripcion"></textarea>
             </div>
             <section class="sectionAgregarGrupo">
-                <button class="btnAgregar" onclick="agregarCurso();">Agregar</button>
+                <button class="btnAgregar" onclick="agregarGrupoTrabajo();">Agregar</button>
             </section>
+        </div>
+        <div class="resultadoAgregar" id="divResultadoAgregarGT" >
+            <span id="spanResultadoAgregarGT">fhdnjsmkz</span>
         </div>
 
     </main>
@@ -90,7 +107,5 @@
         </div>
     </footer>
     <script type="text/javascript" src="../../js/main.js"></script>
-    <script src="../../../vendor/tinymce/js/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
 </body>
 </html>
