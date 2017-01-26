@@ -25,7 +25,7 @@ function agregarGrupoTrabajo(){
             // document.getElementById("demo").innerHTML = xhttp.responseText;
             if(xhttp.responseText != 0){
                 document.getElementById("divResultadoAgregarGT").style.display = 'inline';
-                document.getElementById("spanResultadoAgregarGT").textContent = 'Grupo de trabajo agregado con exito'; 
+                document.getElementById("spanResultadoAgregarGT").textContent = 'Grupo de trabajo agregado con exito';
                 document.getElementById("spanResultadoAgregarGT").style.color = "#3E3A4B";
                 document.getElementById("contAgregarGrupo").style.display = 'none';
                 document.getElementById("nombre").value = '';
@@ -34,8 +34,8 @@ function agregarGrupoTrabajo(){
                 btnText.data = "Agregar Grupo";
             }
             else{
-                document.getElementById("spanResultadoAgregarGT").textContent = 'Error, no se pudo agregar el grupo'; 
-                document.getElementById("spanResultadoAgregarGT").style.color = "red";    
+                document.getElementById("spanResultadoAgregarGT").textContent = 'Error, no se pudo agregar el grupo';
+                document.getElementById("spanResultadoAgregarGT").style.color = "red";
             }
         }
     };
@@ -44,26 +44,6 @@ function agregarGrupoTrabajo(){
     xhttp.open("GET", "./../../PHP/agregarGrupo.php?nombre=" + nombreGrupo + "&descripcion=" + descripcionGrupo, true);
     xhttp.send();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var objCount = 0;
 function agregarObjetivoInput(){
@@ -141,4 +121,30 @@ function displayMessage(pMessage, pIsError) {
     // Set the error message
     var message = document.getElementById('message');
     message.innerHTML = pMessage;
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function deleteCookie( name ) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }

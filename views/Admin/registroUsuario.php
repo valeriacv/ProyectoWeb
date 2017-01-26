@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Regritro Usuario</title>
-    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <meta charset="utf-8">
 </head>
 <body>
@@ -46,9 +46,28 @@
             </div>
             <div class="inputContainer">
                 <span class="label">Grupos Asociados: </span></br>
-                <input type="checkbox" name="grupos"><span>Grupo de trabajo 1 </span></br>
-                <input type="checkbox" name="grupos"><span>Grupo de trabajo 2 </span></br>
-                <input type="checkbox" name="grupos"><span>Grupo de trabajo 3 </span></br>
+
+                <?php
+                    include("./../../PHP/conexion.php");
+                    $sql = "SELECT nombre, descripcion, id FROM GruposTrabajo";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            $nombre = $row["nombre"];
+                            $descripcion = $row["descripcion"];
+                            $id = $row["id"];
+                            echo "
+                                <input type='checkbox' name='input_group' value='$id'><span>$nombre</span></br>
+                            ";
+                        }
+                    } else {
+                        echo "No hay grupos";
+                    }
+                ?>
+                <input id="cbxAllGroups" type='checkbox' name='input_group_all' value='-1' onchange="toggleSelectedGroups()"><span>Todos los grupos</span></br>
             </div>
             <section class="sectionBtn">
                 <div class="btnAgregar" onclick="addUser();">Agregar</div>
